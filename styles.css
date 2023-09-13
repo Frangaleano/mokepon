@@ -197,13 +197,13 @@ input:checked+label {
   }
 
   .tarjeta-de-mokepon {
-    width: 208px;
-    height: 107px;
+    width: 185px;
+    height: 90px;
 
   }
 
   .tarjeta-de-mokepon img {
-    width: 80px;
+    width: 70px;
   }
 
   #seleccionar-mascota {
@@ -227,11 +227,12 @@ input:checked+label {
   }
 
   #mapa {
-    width: 300px;
+    width: 280px;
   }
 
   #ver-mapa button {
     margin: 12px 4px;
+    width: 90px;
   }
   
 }
