@@ -17,6 +17,7 @@ const ataquesDelJugador = document.getElementById('ataques-del-jugador')
 const ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
 const contenedorAtaques = document.getElementById('contenedorAtaques')
+const tituloAtaque = document.getElementById("titulo-ataque")
 
 const sectionVerMapa = document.getElementById('ver-mapa')
 const mapa = document.getElementById('mapa')
@@ -48,7 +49,7 @@ let mapaBackground = new Image()
 mapaBackground.src = './assets/mokemap.png'
 let alturaQueBuscamos
 let anchoDelMapa = window.innerWidth - 20
-const anchoMaximoDelMapa = 350
+const anchoMaximoDelMapa = 450
 
 if (anchoDelMapa > anchoMaximoDelMapa) {
     anchoDelMapa = anchoMaximoDelMapa - 20
@@ -159,7 +160,7 @@ function iniciarJuego() {
         opcionDeMokepones = `
         <input type="radio" name="mascota" id=${mokepon.nombre} />
         <label class="tarjeta-de-mokepon" for=${mokepon.nombre}>
-            <p>${mokepon.nombre}</p>
+            <p><b>${mokepon.nombre}</b></p>
             <img src=${mokepon.foto} alt=${mokepon.nombre}>
         </label>
         `
@@ -343,8 +344,8 @@ function crearMensajeFinal(resultadoFinal) {
     
     sectionMensajes.innerHTML = resultadoFinal
 
-
-    
+    tituloAtaque.style.display = "none"
+    contenedorAtaques.style.display = "none"
     sectionReiniciar.style.display = 'block'
 }
 
@@ -379,19 +380,19 @@ function pintarCanvas() {
 }
 
 function moverDerecha() {
-    mascotaJugadorObjeto.velocidadX = 5
+    mascotaJugadorObjeto.velocidadX = 2
 }
 
 function moverIzquierda() {
-    mascotaJugadorObjeto.velocidadX = -5
+    mascotaJugadorObjeto.velocidadX = -2
 }
 
 function moverAbajo() {
-    mascotaJugadorObjeto.velocidadY = 5
+    mascotaJugadorObjeto.velocidadY = 2
 }
 
 function moverArriba() {
-    mascotaJugadorObjeto.velocidadY = -5
+    mascotaJugadorObjeto.velocidadY = -2
 }
 
 function detenerMovimiento() {
@@ -418,11 +419,14 @@ function sePresionoUnaTecla(event) {
     }
 }
 
+
 function iniciarMapa() {
 
     mascotaJugadorObjeto = obtenerObjetoMascota(mascotaJugador)
     console.log(mascotaJugadorObjeto, mascotaJugador);
     intervalo = setInterval(pintarCanvas, 50)
+
+    window.addEventListener("click", sePresionoUnaTecla)
     
     window.addEventListener('keydown', sePresionoUnaTecla)
 

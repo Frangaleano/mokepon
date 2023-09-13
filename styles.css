@@ -122,9 +122,8 @@ input:checked+label {
   display: grid;
   grid-template-columns: 100px 100px;
   color: white;
-  gap: 27em;
+  gap: 4em;
   top: 28%;
-  position: absolute;
 }
 
 #vidas-jugador,
@@ -161,13 +160,29 @@ input:checked+label {
 
   .tarjetas,
   .tarjetas-ataques {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    justify-content: center;
+  }
+
+  .tarjeta-de-mokepon {
+    width: 200px;
+  }
+
+  .tarjeta-de-mokepon img {
+    width: 80px;
   }
 
   .img-titulo {
     width: 250px;
   }
-}
+
+  #mapa {
+    width: 350px;
+  }
+
+  }
 
 @media (max-width: 350px) {
   #ver-mapa div {
@@ -199,4 +214,24 @@ input:checked+label {
     margin-top: 13px;
   }
 
+  .ataques-jugador p {
+    margin: 10px;
+  }
+
+  .ataques-enemigo p {
+    margin: 10px;
+  }
+  
+  #mensajes {
+    height: 126px;
+  }
+
+  #mapa {
+    width: 300px;
+  }
+
+  #ver-mapa button {
+    margin: 12px 4px;
+  }
+  
 }
