@@ -181,6 +181,18 @@ input:checked+label {
   #mapa {
     width: 350px;
   }
+}
+
+@media (max-width: 500px) {
+
+  .subtitulo {
+    font: 20px;
+  }
+
+  .tarjeta-de-mokepon {
+    height: 120px;
+  }
+
 
   #ver-mapa button {
     margin: 12px 3px;
@@ -237,7 +249,7 @@ input:checked+label {
 
   #ver-mapa button {
     margin: 12px 3px;
-    width: 70px;
+    width: 90px;
   }
   
 }
