@@ -182,6 +182,11 @@ input:checked+label {
     width: 350px;
   }
 
+  #ver-mapa button {
+    margin: 12px 3px;
+    width: 70px;
+  }
+
   }
 
 @media (max-width: 350px) {
@@ -231,8 +236,8 @@ input:checked+label {
   }
 
   #ver-mapa button {
-    margin: 12px 1px;
-    width: 90px;
+    margin: 12px 3px;
+    width: 70px;
   }
   
 }
